@@ -1,0 +1,10 @@
+store "jumlahTraveler" value 2;
+store "hargaTiket" with any 600.000;
+store "hasi;"
+
+if "jumlahTraveler" * "hargaTiket"
+    do "hasi"
+else
+    "harga tiket"
+    do "hasil"
+

@@ -19,6 +19,20 @@
     </style>
 </head>
 <body>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var person = prompt("Please enter your name", "");
+  var sure = confirm("udah bener nih?");
+  var tq = alert("Makasih sudah mengisi form");
+  if (person != null) {
+    document.querySelector(".demo").innerHTML =
+    "hai " + person + " ganteng";
+  }
+}
+</script>
 	
 	<!-- bagian header template -->
 	<header>
@@ -38,6 +52,9 @@
 				</li>
 				<li>
 					<a href="project3.html">Project 3</a>
+                </li>
+                <li>
+					<a href="project4.html">Project 4</a>
 				</li>
 			</ul>
         </nav>
@@ -54,6 +71,9 @@
                         <p>Alamat: Jaka Kencana. Bekasi Selatan</p> 
                         <p>Hoby: Main PB, Futsal, Tenis Meja</p>
                         <p>Skill: html, css, php, flutter</p>
+                        <button onclick="myFunction()">Hit Me!</button>
+                        <p class="demo"></p> 
+                        <p class="tambah"></p>
                     </div>
                 </div>
             </div>

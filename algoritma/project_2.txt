@@ -1,0 +1,8 @@
+store "nilaiA" with any value;
+store "nilaiB" with any value;
+
+if "nilaiA" < 20
+    do "20 nilai lebih besar"
+else
+do "nilaiA" == 5
+    do "nilai pertama sama dengan nilai kedua"

@@ -1,0 +1,7 @@
+store "wiliam" to 0
+
+while "wiliam" < 100
+add "wiliam" + 1
+display "wiliam"
+
+
