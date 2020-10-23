@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+	<!-- bagian header template -->
+	<header>
+		<h1 class="judul">Creative-Crimson</h1>
+	</header>
+	<!-- akhir bagian header template -->
+	
+	<div class="wrap">
+		<!-- bagian menu		 -->
+		<nav class="menu">
+			<ul>
+				<li>
+					<a href="index.html">Project 1</a>
+				</li>
+				<li>
+					<a href="project2.html">Project 2</a>
+				</li>
+				<li>
+					<a href="project3.html">Project 3</a>
+				</li>
+				<li>
+					<a href="project4.html">Project 4</a>
+				</li>
+				<li>
+					<a href="project5.html">Project 5</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="blog">
+			<div class="conteudo">
+                <textarea name="" id="curhat" cols="30" rows="10" placeholder="Yooooo curhat yowwww!!"></textarea>
+                <input type="button" onclick="add();" value="Tweet!" />
+                <p id="tampil"></p>
+			</div>
+        </div>
+        <div class="blog">
+			<div class="conteudo">
+               <input type="text" name="" id="userId" placeholder="username" maxlength="6">
+               <input type="password" name="" id="passId" placeholder="password" maxlength="8">
+               <input type="button" onclick="tambah();" value="submit!" />
+               <p id="show"></p>
+			</div>
+		</div>
+		<!-- akhir bagian konten Blog -->
+	</div>
+    <script type="text/javascript">
+        var tampung_array = [];
+        
+        function add() {
+           var masukan = document.getElementById('curhat');
+           tampung_array.push(masukan.value);
+           masukan.value = '';
+           show();
+        }
+        
+        function show() {
+           var html = '';
+           for (var i=0; i<tampung_array.length; i++) {
+              html += tampung_array[i];
+           }
+           var tampil = document.getElementById('tampil');
+           tampil.innerHTML = html;
+        }
+    </script>
+
+<script type="text/javascript">
+    var tampungUser = [];
+    
+    function tambah() {
+       var user = document.getElementById('userId');
+       var pass = document.getElementById('passId');
+       tampungUser.push(user.value + pass.value);
+       user.value = '';
+       pass.value = '';
+       tampil();
+    }
+    
+    function tampil() {
+       var html = '';
+       for (var i=0; i<tampungUser.length; i++) {
+          html += tampungUser[i];
+       }
+       var tampil = document.getElementById('show');
+       tampil.innerHTML = html;
+    }
+</script>
+    
+    
+</body>
+</html>
