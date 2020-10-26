@@ -36,40 +36,15 @@
             
 			</ul>
       </nav>
-     
-         <div class="card-deck pt-5 ">
-         <div class="card border border-dark">
-           <img src="images/pisang.jpg" class="card-img-top" alt="...">
-           <div class="card-body">
-             <h5 class="card-title">Card title</h5>
-             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-           </div>
-         </div>
-         <div class="card border border-dark">
-           <img src="images/duren.jpeg" class="card-img-top" alt="...">
-           <div class="card-body">
-             <h5 class="card-title">Card title</h5>
-             <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-           </div>
-         </div>
-         <div class="card border border-dark">
-           <img src="images/apel.jpg" class="card-img-top" alt="...">
-           <div class="card-body">
-             <h5 class="card-title">Card title</h5>
-             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-           </div>
-         </div>
-       </div>
-       
+    <div class="container">
+      <div class="card-deck pt-5" id="idGambar" ></div>
+    </div>
 		<div class="blog">
 			<div class="conteudo">
                 <textarea name="" id="curhat" cols="30" rows="10" placeholder="Yooooo curhat yowwww!!"></textarea>
                 <input type="button" onclick="add();" value="Tweet!" />
                 <p id="tampil"></p>
-			</div>
+			    </div>
         </div>
         <div class="blog">
 			<div class="conteudo">
@@ -78,89 +53,12 @@
                <input type="button" onclick="tambah();" value="submit!" />
                <p>Username: <span id="showId"></span>
                <br/>Password: <span id="showPass"></span></p>
-			</div>
+      </div>
 		</div>
 		<!-- akhir bagian konten Blog -->
 	</div>
-    <script type="text/javascript">
-        var tampung_array = [];
-        
-        function add() {
-           var masukan = document.getElementById('curhat');
-           tampung_array.push(masukan.value);
-           masukan.value = '';
-           show();
-        }
-        
-        function show() {
-           var html = '';
-           for (var i=0; i<tampung_array.length; i++) {
-              html += tampung_array[i];
-           }
-           var tampil = document.getElementById('tampil');
-           tampil.innerHTML = html;
-        }
-    </script>
-
-<script type="text/javascript">
-    var tampungUser = [];
-    
-    function tambah() {
-       var user = document.getElementById('userId');
-       var pass = document.getElementById('passId');
-       
-       tampungUser.push(user.value + pass.value);
-       user.value = '';
-       pass.value = '';
-       tampil();
-    }
-    
-    function tampil() {
-       var idHtml = '';
-       var pasHtml = '';
-       for (var i=0; i<tampungUser.length; i++) {
-          idHtml += pasHtml += tampungUser[i];
-          
-       }
-       var tampil = document.getElementById('showId');
-       tampil.innerHTML= idHtml;
-       var tampil = document.getElementById('showPass');
-       tampil.innerHTML = pasHtml;
-    }
-</script>
-
-<!-- <script>
-   var imgArray = new Array();
-
-imgArray[0] = new Image();
-imgArray[0].src = "images/pisang.jpg";
-
-imgArray[1] = new Image();
-imgArray[1].src = "images/duren.jpeg";
-
-imgArray[2] = new Image();
-imgArray[2].src = "images/apel.jpg";
-
-/*------------------------------------*/
-
-function nextImage(element)
-{
-    var img = document.getElementById(element);
-
-    for(var i = 0; i < imgArray.length;i++)
-    {
-        if(imgArray[i].src == img.src) // << check this
-        {
-            if(i === imgArray.length){
-                document.getElementById(element).src = imgArray[0].src;
-                break;
-            }
-            document.getElementById(element).src = imgArray[i+1].src;
-            break;
-        }
-    }
-}
-</script> -->
-    
+<script src="./array/tweet.js"></script>
+<script src="./array/user_pass.js"></script>
+<script src="./array/buah.js"></script>
 </body>
 </html>
