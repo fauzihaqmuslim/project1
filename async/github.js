@@ -5,7 +5,7 @@ const getData = async() =>{
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);
-        let listApiNegara =` 
+        let github =` 
         <div class="col-12 col-lg-3 mt-3">
             <div class = "card">
                 <img class="card-img-top" src="${data.avatar_url}" alt="card image">
@@ -15,6 +15,6 @@ const getData = async() =>{
             </div>
         </div>
         `;
-        bendera.innerHTML += listApiNegara
+        bendera.innerHTML += github
     }
 getData();
